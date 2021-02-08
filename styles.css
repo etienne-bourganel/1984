@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+html, body, div, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+
 @font-face {
   font-family: 'lazer84regular';
   src: url('./resources/font/lazer84-webfont.woff2') format('woff2'),
@@ -7,16 +22,25 @@
 
 }
 
-body {
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+#background_image {
   background-image: url("/Users/etiennebourganel/Code/Own projects/1984/resources/visuals/background_sunset.jpg");
   background-size: cover;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-color: black;
 }
 
+body {
+  background: -webkit-linear-gradient( rgb(68, 24, 68), rgb(104, 104, 23));
+}
+
 h1 {
   font-family: 'lazer84regular';
-  font-size: 110px;
+  font-size: 20vw;
   background: -webkit-linear-gradient(left, purple , red);
    background: -o-linear-gradient(right, purple, red);
    background: -moz-linear-gradient(right, purple, red);
@@ -24,4 +48,23 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+  margin-top: 5vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 12em;
+  margin: 10px;
+  flex-basis: auto;
+}
+
+h2 {
+ color: white;
+ text-align: center;
 }
